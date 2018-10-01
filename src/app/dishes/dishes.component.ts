@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Dish} from '../dish';
 
 @Component({
   selector: 'app-dishes',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dishes.component.css']
 })
 export class DishesComponent implements OnInit {
+
+  dish:Dish={
+    id:1,
+    name:"Kung Pao Chicken"
+  }
 
   constructor() { }
 
