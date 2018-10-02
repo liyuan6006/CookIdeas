@@ -7,3 +7,21 @@
 .example-full-width {
   width: 100%;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.tile {
+  cursor: pointer;
+}
+
+.tile:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}

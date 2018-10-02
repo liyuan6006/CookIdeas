@@ -1,7 +1,16 @@
-<h2>{{dish.name | uppercase}} Details</h2>
+
+
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile [class.selected]="selectedDish===dish" class="tile" *ngFor="let dish of dishes" (click)="onSelect(dish)"> {{dish.name}}</mat-grid-tile>
+</mat-grid-list>
+
+
+<div *ngIf="selectedDish">
+<h2>{{selectedDish.name | uppercase}} Details</h2>
 
 <div class="example-form">  
   <mat-form-field class="example-full-width">
-      <input [(ngModel)]="dish.name" matInput placeholder="name">
+      <input [(ngModel)]="selectedDish.name" matInput placeholder="name">
     </mat-form-field>
+</div>
 </div>
