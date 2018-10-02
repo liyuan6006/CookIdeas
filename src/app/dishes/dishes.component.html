@@ -4,13 +4,4 @@
   <mat-grid-tile [class.selected]="selectedDish===dish" class="tile" *ngFor="let dish of dishes" (click)="onSelect(dish)"> {{dish.name}}</mat-grid-tile>
 </mat-grid-list>
 
-
-<div *ngIf="selectedDish">
-<h2>{{selectedDish.name | uppercase}} Details</h2>
-
-<div class="example-form">  
-  <mat-form-field class="example-full-width">
-      <input [(ngModel)]="selectedDish.name" matInput placeholder="name">
-    </mat-form-field>
-</div>
-</div>
+<app-dish-detail [dish]="selectedDish"></app-dish-detail>

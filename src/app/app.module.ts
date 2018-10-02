@@ -5,11 +5,13 @@ import { DishesComponent } from './dishes/dishes.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
+import { DishDetailComponent } from './dish-detail/dish-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DishesComponent
+    DishesComponent,
+    DishDetailComponent
   ],
   imports: [
     BrowserModule,
