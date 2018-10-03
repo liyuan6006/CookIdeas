@@ -1,23 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../dish';
-import { DISHES } from '../mock-dishes';
+import {DishService} from '../dish.service';
+
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
   styleUrls: ['./dishes.component.css']
 })
 export class DishesComponent implements OnInit {
-  dishes = DISHES;
+  dishes:Dish[];
   dish: Dish = {
     id: 1,
     name: "Kung Pao Chicken"
   }
   selectedDish: Dish;
-  constructor() { }
+
+  constructor(private dishService :DishService) { }
 
   ngOnInit() {
+    this.getDishes();
   }
 
+  getDishes():void{
+    this.dishService.getDishes().subscribe(dishes=>this.dishes=dishes);
+  }
   onSelect(dish: Dish): void {
     this.selectedDish = dish;
   }
