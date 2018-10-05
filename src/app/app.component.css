@@ -3,3 +3,14 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
   }
+  .example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .routLink {
+    padding: 0 14px;
+    color:#fff;
+    text-decoration:none
+  }
