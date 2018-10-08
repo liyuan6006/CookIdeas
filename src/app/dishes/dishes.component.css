@@ -1,19 +1,28 @@
-
-
-mat-grid-tile {
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
   background: lightblue;
 }
 
-.tile {
-  cursor: pointer;
-}
+.example-card {
+max-width: 400px;
+max-height: 400px;
+margin: 10px;
+text-align: center;
 
-.tile:hover {
+}
+.example-card:hover {
   color: #607D8B;
   background-color: #DDD;
   left: .1em;
+  
+  }
+.responsive {
+  width: 100%;
+  height: 60%
 }
-.selected {
-  background-color: #CFD8DC !important;
-  color: white;
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }
+

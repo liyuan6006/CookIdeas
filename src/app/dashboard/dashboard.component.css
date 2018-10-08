@@ -1,12 +1,14 @@
-
 .flex-container {
+  display: flex;
+  flex-wrap: wrap;
   background: lightblue;
 }
 
 .example-card {
-  margin:auto;
-width: 60%;
-height: 60%;
+max-width: 400px;
+max-height: 400px;
+margin: 10px;
+text-align: center;
 
 }
 .example-card:hover {
@@ -23,4 +25,3 @@ height: 60%;
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
-

@@ -13,4 +13,7 @@ export class DishService {
   getDishes():Observable<Dish[]>{
     return of(DISHES)
   }
+  getDishe(id:number):Observable<Dish>{
+    return of(DISHES.find(dish=>dish.id===id));
+  }
 }
