@@ -1,0 +1,12 @@
+<mat-form-field>
+  <input #searchBox id="search-box" type="text" (keyup)="search(searchBox.value)" matInput placeholder="Search">
+</mat-form-field>
+<ul class="search-result">
+    <li *ngFor="let dish of dishes$|async">
+      <a routerLink="/detail/{{dish.id}}" routerLinkActive="router-link-active">
+      {{dish.name}}
+      </a>
+
+    </li>
+
+  </ul>

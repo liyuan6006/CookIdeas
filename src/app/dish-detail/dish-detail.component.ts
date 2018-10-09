@@ -30,4 +30,8 @@ dish :Dish;
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+    this.dishService.updateDish(this.dish)
+    .subscribe(()=>this.goBack());
+  }
 }
