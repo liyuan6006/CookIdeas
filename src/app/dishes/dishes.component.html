@@ -1,22 +1,19 @@
-
-
-  <div  class="flex-container" >  
-    <mat-card *ngFor="let dish of dishes"  class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
-        <mat-card-subtitle>{{dish.name}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image class="responsive" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-        {{dish.description.substr(0,20)}}...
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button> <a routerLink="/detail/{{dish.id}}" > LEARN MORE</a></button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-
+<app-dish-search></app-dish-search>
+<div class="flex-container">
+  <mat-card *ngFor="let dish of dishes" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{dish.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="responsive" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content class="card-content">
+      <p>
+        {{dish.description.substr(0,40)}}...
+      </p>
+    </mat-card-content>
+    <mat-card-actions align="left">
+      <a routerLink="/detail/{{dish.id}}"><button mat-raised-button color="primary"> LEARN MORE</button></a>
+    </mat-card-actions>
+  </mat-card>
+</div>

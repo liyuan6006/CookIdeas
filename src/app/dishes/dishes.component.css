@@ -1,6 +1,7 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content:center;
   background: lightblue;
 }
 
@@ -10,6 +11,9 @@ max-height: 400px;
 margin: 10px;
 text-align: center;
 
+}
+.card-content {
+  text-align: left;
 }
 .example-card:hover {
   color: #607D8B;
